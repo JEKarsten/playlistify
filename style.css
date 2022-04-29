@@ -1,0 +1,265 @@
+:root {
+    --spotify-black: #191414;
+    --spotify-white: #ffffff;
+    --spotify-green: #1db954;
+    --gray: #444;
+
+    --element-distance: 30px;
+}
+
+body {
+    background-color: var(--spotify-black);
+    color: var(--spotify-white);
+    font-family: Montserrat, Helvetica, Arial, sans-serif;
+}
+
+.container {
+    padding: 40px;
+}
+
+#tokenSection, #searchSection {
+    display: none;
+    margin-top: calc(var(--element-distance) * 2);
+}
+
+
+
+h1#title {
+    margin: 0;
+    color: var(--spotify-green);
+    text-align: center;
+    font-size: 3em;
+}
+
+h1#title:hover {
+    cursor: pointer;
+}
+
+
+
+#searchInput {
+    margin-bottom: var(--element-distance);
+}
+
+#searchGeneral {
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    border-radius: 25px;
+    border: none;
+    padding: 10px 20px;
+    font-size: large;
+    margin-bottom: var(--element-distance);
+}
+
+#advSearch {
+    /* background-color: var(--gray); */
+    border-radius: 25px;
+    border: 3px solid var(--spotify-green);
+    padding: 25px;
+    padding-top: 15px;
+}
+
+.searchLabel {
+    margin-bottom: 20px;
+    text-align: center;
+    color: var(--spotify-green);
+    font-weight: bold;
+}
+
+#advSearch #params {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+#advSearch .searchParam {
+    display: flex;
+    flex-direction: column;
+}
+
+#advSearch .searchParam label {
+    font-weight: bold;
+    font-size: small;
+    /* text-transform: uppercase; */
+}
+
+#advSearch .searchParam input[type="text"] {
+    font-size: large;
+    width: 300px;
+}
+
+
+
+
+.mainButton {
+    height: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: var(--element-distance);
+    background-color: var(--spotify-green);
+
+    font-size: large;
+    color: var(--spotify-white);
+    font-weight: bold;
+    text-transform: uppercase;
+
+    border-radius: 25px;
+    border: 3px solid var(--spotify-green);
+    padding: 5px 30px;
+}
+
+.mainButton:hover {
+    margin-top: var(--element-distance);
+    background-color: var(--spotify-black);
+    color: var(--spotify-green);
+    border-color: var(--spotify-green);
+    cursor: pointer;
+}
+
+
+
+
+#searchResults {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    align-items: stretch;
+    text-align: center;
+}
+
+#searchResults .searchResult {
+    /* width: calc((100%)/5 - 15px - 20px); */
+    width: 200px;
+    background-color: var(--gray);
+    padding: 10px;
+}
+
+#searchResults .searchResult:hover {
+    /* opacity: .5; */
+    background-color: var(--spotify-green);
+    cursor: pointer;
+}
+
+#searchResults .searchResult .cover {
+    width: 100%;
+}
+
+#searchResults .searchResult .track {
+    font-weight: bold;
+}
+
+#searchResults .searchResult .artist {
+    font-size: small;
+}
+
+
+
+
+
+#playlistTracks {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: center;
+    align-items: flex-start;
+
+    text-align: left;
+}
+
+#playlistTracks .item {
+    /* width: calc((100%)/3 - 5px); */
+    width: 400px;
+    background-color: var(--gray);
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+#playlistTracks .item:hover {
+    opacity: .9;
+    /* background-color: var(--spotify-green); */
+    cursor: pointer;
+}
+
+#playlistTracks .item .cover {
+    width: 20%;
+    height: 20%;
+}
+
+#playlistTracks .item .metadata {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#playlistTracks .item .metadata .track {
+    font-weight: bold;
+}
+
+#playlistTracks .item .metadata .artist {
+    font-size: small;
+}
+
+
+#popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#popupBackground {
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+}
+
+#popupTrackData {
+    position: relative;
+    z-index: 3;
+    margin: 100px auto 0;
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: var(--gray);
+    color: var(--spotify-white);
+}
+
+#popupTrackData h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: var(--spotify-green);
+    text-align: center;
+}
+
+#popupTrackData .heading {
+    margin-top: 5px;
+    color: var(--spotify-green);
+    font-weight: bold;
+}
+
+#popup .close {
+    float: right;
+    margin-left: auto;
+    margin-right: 0;
+    transform: translate(10px, -15px);
+    color: var(--spotify-white);
+    font-size: 20px;
+}
+
+#popup .close:hover {
+    color: var(--spotify-green);
+    cursor: pointer;
+}

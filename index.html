@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playlistify</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="scripts/app.js"></script>
+    <script src="scripts/client.js"></script>
+</head>
+
+<body onload="onPageLoad()">
+    <div class="container">
+
+        <h1 id="title" onclick="resetDisplay()">Playlistify</h1>
+
+        <div id="tokenSection">
+            <input class="mainButton" type="button" onclick="requestAuthorization()" value="Request Authorization"><br/>
+        </div>
+
+        <div id="searchSection">
+            <div id="searchInput">
+                <!-- <label for="searchGeneral">Search</label> -->
+                <input id="searchGeneral" type="text" placeholder="enter search term...">
+                
+                <div id="advSearch">
+                    <div class="searchLabel">Advanced Search Parameters</div>
+                    <div id="params">
+                        <div class="searchParam">
+                            <label for="searchTrack">Track</label>
+                            <input id="searchTrack" type="text">
+                        </div>
+
+                        <div class="searchParam">
+                            <label for="searchArtist">Artist</label>
+                            <input id="searchArtist" type="text">
+                        </div>
+
+                        <div class="searchParam">
+                            <label for="searchAlbum">Album</label>
+                            <input id="searchAlbum" type="text">
+                        </div>
+                    </div>
+                </div>
+
+                <input id="searchButton" class="mainButton" type="button" onclick="searchSong()" value="Search">
+            
+            </div>
+
+            <div id="searchResults"></div>
+            <div id="playlistTracks"></div>
+        </div>
+        <div id="popup">
+            <div id="popupBackground" onclick="clearPopup()"></div>
+            <div id="popupTrackData">
+                <span class="close" onclick="clearPopup()">&times;</span>
+                <h2>Metadata analysis</h2>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
