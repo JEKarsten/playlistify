@@ -10,5 +10,18 @@ Playlistify is a web application that suggests playlists based on a single song.
 4. Copy the Client ID and Client Secret strings from the dashboard into the consts in the ```client.js``` file.
 5. Launch the application locally in a browser using the same port specified in the redirect URL.
 
+## Example
+After authorizing the Spotify API, the home page should look like this:
+![Home page](examples/home.png)
+
+This is an example of the search results page:
+![Search results](examples/search_results.png)
+
+After clicking on a song card from the search, the user is provided with a list of recommendations:
+![Recommendations](examples/recs.png)
+
+By clicking on a song, the user can see metadata about the sonic differences between the seed song and the recommended song:
+![Search results](examples/metadata.png)
+
 ## Credits
 This project is authored by James Karsten in 2022. The framework for getting the access token was based off of [this repository](https://github.com/makeratplay/SpotifyWebAPI.git).

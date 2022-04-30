@@ -144,7 +144,9 @@ function handleAuthorizationResponse(response) {
     console.log(data);
     if (data["access_token"] != undefined) {
         ACCESS_TOKEN = data["access_token"];
+        REFRESH_TOKEN = data["refresh_token"];
         localStorage.setItem("access_token", ACCESS_TOKEN);
+        localStorage.setItem("refresh_token", REFRESH_TOKEN);
     }
     onPageLoad();
 }
