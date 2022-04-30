@@ -2,12 +2,11 @@ const REDIRECT_URI = "http://127.0.0.1:5500/index.html";
 
 var ACCESS_TOKEN = null;
 var REFRESH_TOKEN = null;
+var SEED_SONG_ID = null;
 
 const NUM_SEARCH_TERMS = 10;
 const NUM_PLAYLIST_SONGS = 27;
 const METADATA_DECIMAL_PLACES = 3;
-
-var SEED_SONG_ID = null;
 
 const AUTHORIZE = "https://accounts.spotify.com/authorize"
 const TOKEN = "https://accounts.spotify.com/api/token";
